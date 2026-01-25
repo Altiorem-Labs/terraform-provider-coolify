@@ -1,0 +1,37 @@
+name: Bug report
+description: Report a bug or unexpected behavior
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: textarea
+    attributes:
+      label: What happened?
+      description: Describe what happened and what you expected to happen.
+      placeholder: A clear and concise description of the bug.
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Steps to reproduce
+      description: How can we reproduce the issue?
+      placeholder: |
+        1. Run `terraform apply`
+        2. Create a Coolify application
+        3. See error
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Provider version
+      placeholder: e.g. v0.0.1
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Additional context
+      description: Logs, screenshots, or any other relevant info.
+    validations:
+      required: false
