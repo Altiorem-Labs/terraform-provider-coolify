@@ -1,0 +1,27 @@
+name: Documentation
+description: Improvements or additions to documentation
+title: "[Docs]: "
+labels: ["docs"]
+body:
+  - type: textarea
+    attributes:
+      label: What documentation needs to be updated?
+      description: Describe what documentation should be added, changed, or improved.
+      placeholder: e.g. README, provider docs, examples, website...
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Why is this change needed?
+      description: Explain the reason or problem with the current documentation.
+      placeholder: Missing info, outdated docs, unclear instructions, etc.
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Suggested content
+      description: If you have a draft or ideas, share them here.
+    validations:
+      required: false

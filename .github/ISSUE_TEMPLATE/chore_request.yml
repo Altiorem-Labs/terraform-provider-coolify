@@ -1,0 +1,29 @@
+name: Chore / Maintenance
+description: Internal maintenance, refactors, tooling, or housekeeping
+title: "[Chore]: "
+labels: ["chore"]
+body:
+  - type: textarea
+    attributes:
+      label: What needs to be done?
+      description: Describe the maintenance or housekeeping task.
+      placeholder: e.g. Update CI config, refactor provider setup, clean up docs...
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Why is this needed?
+      description: Context or motivation for this chore.
+      placeholder: Technical debt, cleanup, preparation for a feature, etc.
+    validations:
+      required: true
+
+  - type: checkboxes
+    attributes:
+      label: Area
+      options:
+        - label: CI / Automation
+        - label: Refactor
+        - label: Tooling
+        - label: Repo / GitHub config
