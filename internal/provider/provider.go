@@ -6,6 +6,7 @@ import (
 	"os"
 
 	"github.com/Altiorem-Labs/terraform-provider-coolify/internal/client"
+	"github.com/Altiorem-Labs/terraform-provider-coolify/internal/resources/environment"
 	"github.com/Altiorem-Labs/terraform-provider-coolify/internal/resources/project"
 	"github.com/hashicorp/terraform-plugin-framework/datasource"
 	"github.com/hashicorp/terraform-plugin-framework/path"
@@ -36,6 +37,7 @@ func (p *CoolifyProvider) Metadata(_ context.Context, _ provider.MetadataRequest
 func (p *CoolifyProvider) Resources(ctx context.Context) []func() resource.Resource {
 	return []func() resource.Resource{
 		project.NewProjectResource,
+		environment.NewEnvironmentResource,
 	}
 }
 
