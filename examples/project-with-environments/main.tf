@@ -20,7 +20,7 @@ resource "coolify_project" "webapp" {
 }
 
 # Create staging environment
-resource "coolify_environments" "staging" {
+resource "coolify_environment" "staging" {
   project_id = coolify_project.webapp.id
   name       = "Staging"
 
@@ -28,7 +28,7 @@ resource "coolify_environments" "staging" {
 }
 
 # Create development environment
-resource "coolify_environments" "development" {
+resource "coolify_environment" "development" {
   project_id = coolify_project.webapp.id
   name       = "Development"
 
@@ -36,7 +36,7 @@ resource "coolify_environments" "development" {
 }
 
 # Create testing environment
-resource "coolify_environments" "testing" {
+resource "coolify_environment" "testing" {
   project_id = coolify_project.webapp.id
   name       = "Testing"
 
