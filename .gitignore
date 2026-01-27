@@ -32,3 +32,5 @@ go.work.sum
 # .vscode/
 terraform.rc
 *.tfvars
+# Added by goreleaser init:
+dist/

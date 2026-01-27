@@ -1,0 +1,42 @@
+version: 2
+
+project_name: terraform-provider-coolify
+
+before:
+  hooks:
+    - go mod tidy
+
+builds:
+  - id: terraform-provider-coolify
+    main: .
+    binary: terraform-provider-coolify
+    goos:
+      - windows
+      - linux
+      - darwin
+    goarch:
+      - amd64
+      - arm64
+    env:
+      - CGO_ENABLED=0
+
+archives:
+  - format: zip
+    name_template: >-
+      {{ .ProjectName }}_{{ .Version }}_{{ .Os }}_{{ .Arch }}
+
+checksum:
+  name_template: "{{ .ProjectName }}_{{ .Version }}_SHA256SUMS"
+
+release:
+  github:
+    owner: Altiorem-Labs
+    name: terraform-provider-coolify
+
+changelog:
+  sort: asc
+  filters:
+    exclude:
+      - "^docs:"
+      - "^test:"
+      - "^chore:"
