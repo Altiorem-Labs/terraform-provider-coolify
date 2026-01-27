@@ -18,3 +18,13 @@ resource "coolify_project" "production_infrastructure" {
   name        = "Production Infrastructure"
   description = "Core infrastructure resources managed via Terraform"
 }
+
+resource "coolify_environment" "production_env" {
+  project_id  = "yggg0okkcgcokc80o04o0cc4"
+  name        = "Entorno Coolify"
+}
+
+resource "coolify_environment" "development_env" {
+  project_id  = "yggg0okkcgcokc80o04o0cc4"
+  name        = "Entorno Coolify Desarrollo"
+}
